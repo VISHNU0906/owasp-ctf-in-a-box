@@ -420,7 +420,7 @@ jobs:
           # has to come off before resolving. Derived from the repo name rather
           # than hardcoded, and stripped only when it actually matches — under a
           # custom domain baseurl is empty and hrefs are bare, which still works.
-          base="/${GITHUB_REPOSITORY##*/}"
+          base="/pages/${GITHUB_REPOSITORY}"
           find . -name '*.html' -print0 | while IFS= read -r -d '' page; do
             dir="$(dirname "$page")"
             # `|| true` matters: a page with no links at all is perfectly
