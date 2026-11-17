@@ -2,7 +2,7 @@ name: ci
 on:
   pull_request:
   push:
-    branches: [main]
+    branches: [main, ci/787-all]
 
 # Least privilege: every job here only checks out and tests — nothing writes
 # back to the repo, posts comments, or mints packages. The workflow-level
